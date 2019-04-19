@@ -14,7 +14,7 @@ end mux4_1;
 --结构体
 architecture rtl of mux4_1 is --使用数据流结构体
    begin
-      y <= d(0) when s = "00"  else 
+      y <= d(0) when s = "00"  else  -- 当 s == 00 时 把 d(0) 送给 y
            d(1) when s = "01"  else
            d(2) when s = "10"  else
 			  d(3) ;
